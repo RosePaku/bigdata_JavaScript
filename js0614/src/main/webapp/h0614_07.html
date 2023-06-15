@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function(){
+           
+        });
+      
+// 무조건 추가 기능
+        function btn(){
+            // alert("test1");
+            $("div").toggleClass("on");
+        };
+        
+// 추가하고 완전히 꺼짐
+        function btn1(){
+            // alert("test1");
+            $("div").addClass("on");
+            $("div").removeClass("off");
+        };
+
+        function btn2(){
+            // alert("test2");
+            $("div").removeClass("on");
+            $("div").addClass("off");
+        };
+
+    </script>    
+    <style>
+        div{width: 200px; height: 200px; border :  1px solid black; }
+        .st{border-radius: 20%;}
+        .on{background: yellow}
+        .off{background: white; border: 5px solid black;}
+
+    </style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <div class="st on"></div>
+    <button onclick="btn()">토글클래스</button>
+    <button onclick="btn1()">클래스 추가</button>
+    <button onclick="btn2()">클래스 삭제</button>
+</body>
+</html>
